@@ -1,0 +1,14 @@
+P = 7000;
+Vin =58 ;
+fs = 10e3;
+Vout = 48;
+Imp = 7.48;
+n_serie = Vin/29
+n_parral= P/(Vout*Imp)
+Ioutmax= P/Vout
+dellI = 0.01*Ioutmax*(Vout/Vin)
+delvout = 0.01*Vout
+L=(Vin *(Vout-Vin))/(dellI*fs*Vout)
+C = (Ioutmax*(1-(Vin/Vout)))/(fs*delvout)
+R = Vout/Ioutmax
+d = (Vout-Vin)/Vout
